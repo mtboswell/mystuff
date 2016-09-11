@@ -1,0 +1,8 @@
+.*.swp
+*~
+wtf/
+generated/
+*.so
+*.o
+libs/
+Makefile
