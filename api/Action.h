@@ -6,4 +6,5 @@
      Verb verb;
      Adapter provider;
      Command instantiate();
+       Serializer getSerializer();
    };

@@ -1,0 +1,17 @@
+We want to be able to use the most convenient library for each API, so each adapter will be an independent binary that interfaces via stdin/stdout.
+
+It will accept on stdin a query or edit, and produce data object on stdout. I'm thinking of using Cap'n Proto for the object representation.
+
+What sort of query language? SQL? Too complicated. Need something like:
+	GET <url>
+	PUT <url> <diff>
+	LIST <url-prefix>
+So GET returns a data object, PUT accepts a binary data object diff
+List returns all available URLs or just a subset if provided with a prefix
+
+URLs look something like imaps://messagingengine.com/micah@bswll.net/INBOX/...
+Better example: facebook://micahboswell/posts/23k4l23k4j
+Mapping:	facebook:// --> facebook adapter
+		micahboswell --> username
+		posts --> post object type
+		23k4l23k4j --> facebook object ID

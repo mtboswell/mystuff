@@ -1,7 +1,7 @@
 #!/bin/bash
 git clone https://github.com/MailCore/mailcore2.git
 sudo apt-get -y install libctemplate-dev libicu-dev libsasl2-dev libtidy-dev \
-        uuid-dev libxml2-dev libglib2.0-dev autoconf automake libtool
+        uuid-dev libxml2-dev libglib2.0-dev autoconf automake libtool cmake
 git clone --depth=1 https://github.com/dinhviethoa/libetpan
 cd libetpan
 ./autogen.sh

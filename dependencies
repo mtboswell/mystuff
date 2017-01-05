@@ -2,3 +2,4 @@
 apt packages:
 python-pystache
 python-yaml
+libfuse # forget kio, fuse still makes way more sense
