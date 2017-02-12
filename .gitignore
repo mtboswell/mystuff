@@ -5,5 +5,5 @@ generated/
 *.so
 *.o
 libs/
-Makefile
+bin/
 .ycm_extra_conf.py
