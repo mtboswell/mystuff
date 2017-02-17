@@ -12,3 +12,6 @@ generated/%.capnp.c++: %.capnp
 bin/%.o: generated/%.capnp.c++
 	mkdir -p bin
 	g++ -shared -fPIC -std=c++11 -o $@ $< -Igenerated -lcapnp -lkj
+
+clean: 
+	rm -r bin/ generated/

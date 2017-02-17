@@ -1,0 +1,21 @@
+NoApp Notes
+
+2017-02-17
+	Tried clang (takes >12GB disk to build), tried castxml (doesn't work on .h), now 
+		trying doxygen to extract an AST from header files
+	Testing it on a project that uses doxygen (apr 1.5.2-5) via the debian source package
+		(which is how I intend to get sources or headers and binaries from the same 
+		place)
+	apt-get source libapr1
+	Are the doxygen comments in the headers from the dev package?
+	apt-get install libapr1-dev
+	yes they appear to be
+	now how to generate doxygen docs from there?
+	BTW need to copy my dotfiles from bach or wherever
+	Copied doxygen.conf from apr source and added GENERATE_XML=YES and changed 
+		INPUT to INPUT=/usr/include/apr-1.0 and changed OUTPUT_DIRECTORY to .
+	Needed to copy theirs because it has fun macro stuff.
+	Turns out doxygen works just fine with the -dev headers.
+	APR is a C lib.
+	APR doxygen.conf also available from 
+		http://svn.apache.org/repos/asf/apr/apr/tags/1.5.2/docs/doxygen.conf
